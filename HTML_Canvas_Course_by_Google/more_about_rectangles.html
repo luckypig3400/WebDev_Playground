@@ -15,8 +15,18 @@
             var c = document.querySelector("#c");
             var ctx = c.getContext("2d");
 
-            ctx.fillRect(50,50,50,50);
-            ctx.strokeRect(100,100,100,100);
+            ctx.fillRect(50, 50, 50, 50);
+            ctx.strokeRect(100, 100, 100, 100);
+
+            ctx.fillStyle = "blue";// change fill color
+            ctx.fillRect(0, 0, 50, 50);
+
+            ctx.clearRect(0, 0, 25, 25);
+            //erase a portion of the canvas or object
+
+            //ctx.clearRect(0, 0, c.width, c.height);
+            //A slightly shorter way to clear a full canvas
+
         </script>
     </body>
 
