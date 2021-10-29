@@ -15,7 +15,9 @@
             var c = document.querySelector("#c");
             var ctx = c.getContext("2d");
 
-            ctx.strokeStyle = "#33CC33";
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 3;
+            //https://www.w3schools.com/tags/canvas_linewidth.asp
 
             ctx.strokeRect(50, 50, 100, 100);
             ctx.beginPath();
@@ -23,13 +25,13 @@
             ctx.lineTo(125, 125);
             ctx.lineTo(125, 75);
 
-            ctx.fillStyle = "blue";
+            ctx.fillStyle = "white";
             ctx.fill();
 
-            ctx.font = "36px serif";
+            ctx.font = "36px Impact";
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
-            ctx.strokeText("HELLO UDACITY!", 50, 30);
-            ctx.fillText("WoW Cool~~~", 50, 180);
+            ctx.strokeText("CANVAS MEMES!", 50, 36);
+            ctx.strokeText("WoW Cool~~~", 50, 189);
         </script>
     </body>
 
