@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <canvas id="c" width="600" height="600"></canvas>
+        <canvas id="c" width="300" height="300"></canvas>
 
         <script>
             var c = document.querySelector("#c");
@@ -30,8 +30,10 @@
 
             ctx.font = "36px Impact";
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
-            ctx.strokeText("CANVAS MEMES!", 50, 36);
-            ctx.strokeText("WoW Cool~~~", 50, 189);
+            ctx.textAlign = "center";
+
+            ctx.strokeText("CANVAS MEMES!", c.width / 2, 36);
+            ctx.strokeText("WoW Cool~~~", c.width / 2, 189);
         </script>
     </body>
 
