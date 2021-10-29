@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colors</title>
+    </head>
+
+    <body>
+        <canvas id="c"></canvas>
+
+        <script>
+            var c = document.querySelector("#c");
+            var ctx = c.getContext("2d");
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            ctx.strokeStyle = "#33CC33";
+
+            ctx.strokeRect(300, 300, 300, 300);
+            ctx.beginPath();
+            ctx.moveTo(375, 375);
+            ctx.lineTo(525, 525);
+            ctx.lineTo(525, 375);
+
+            ctx.fillStyle = "blue";
+            ctx.fill();
+        </script>
+    </body>
+
+</html>
