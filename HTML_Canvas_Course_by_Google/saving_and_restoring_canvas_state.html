@@ -20,11 +20,14 @@
 
             ctx.fillStyle = "pink";
             ctx.fillRect(0, 0, 50, 50);
+            //Save state with pink fill
+            ctx.save();
 
             ctx.fillStyle = "green";
             ctx.fillRect(100, 100, 30, 30);
 
-            ctx.fillStyle = "pink";
+            //Restore to pink fill
+            ctx.restore();
             ctx.fillRect(600, 600, 300, 300);
         </script>
     </body>
