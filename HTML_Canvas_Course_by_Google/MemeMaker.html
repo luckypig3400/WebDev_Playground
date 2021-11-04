@@ -30,6 +30,7 @@
                 <button id="saveBtn">Save</button>
             </div>
         </div>
+
         <script>
             function textChangeListener(evt) {
                 var id = evt.target.id;
@@ -49,12 +50,28 @@
                 var canvas = document.querySelector('canvas');
                 var ctx = canvas.getContext("2d");
                 // Your code here
+                ctx.drawImage(image, 0, 0);
+
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = "black";
+                ctx.font = "36px Impact";//標楷體DFKai-sb
+                //https://www.wibibi.com/info.php?tid=CSS_font-family_%E6%A8%99%E6%A5%B7%E9%AB%94
+                ctx.textAlign = "center";
+                ctx.fillStyle = "white";
+
+                // draw topLine
+                ctx.strokeText(topLine, canvas.width / 2, 36);
+                ctx.fillText(topLine, canvas.width / 2, 36);
+
+                // draw bottomLine
+                ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 36);
+                ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 36);
+
             }
 
             function saveFile() {
                 window.open(document.querySelector('canvas').toDataURL());
             }
-
 
             function handleFileSelect(evt) {
                 var canvasWidth = 500;
