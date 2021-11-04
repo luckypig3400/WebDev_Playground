@@ -50,7 +50,9 @@
                 var canvas = document.querySelector('canvas');
                 var ctx = canvas.getContext("2d");
                 // Your code here
-                ctx.drawImage(image, 0, 0);
+                if (image != null) {
+                    ctx.drawImage(image, 0, 0);
+                }
 
                 ctx.lineWidth = 3;
                 ctx.strokeStyle = "black";
@@ -60,13 +62,16 @@
                 ctx.fillStyle = "white";
 
                 // draw topLine
-                ctx.strokeText(topLine, canvas.width / 2, 40);
-                ctx.fillText(topLine, canvas.width / 2, 40);
+                if (topLine != null) {
+                    ctx.strokeText(topLine, canvas.width / 2, 40);
+                    ctx.fillText(topLine, canvas.width / 2, 40);
+                }
 
                 // draw bottomLine
-                ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 20);
-                ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 20);
-
+                if (bottomLine != null) {
+                    ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 20);
+                    ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 20);
+                }
             }
 
             function saveFile() {
