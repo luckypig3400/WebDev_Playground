@@ -10,7 +10,8 @@
 
     <body>
         <h1>Moving Objects in a Canvas</h1>
-        <h3>Scale Example</h3>
+
+        <h3>Scaling Example</h3>
         <canvas id="c" width="300" height="300"></canvas>
         <script>
             var c = document.querySelector("#c");
@@ -21,16 +22,55 @@
             ctx.fillRect(3, 3, 69, 69);
         </script>
 
-        <h3>Translate Example</h3>
+        <h3>Translation Example</h3>
         <canvas id="c1"></canvas>
         <script>
             var c = document.querySelector("#c1");
             var ctx = c.getContext("2d");
             ctx.fillStyle = "#FF5733";
-            
-            ctx.translate(60,30);
-            ctx.fillRect(0,0,30,30);
+
+            ctx.translate(60, 30);
+            ctx.fillRect(0, 0, 30, 30);
         </script>
+
+        <h3>Rotation Example</h3>
+        <canvas id="c2" width="300" height="300"></canvas>
+        <script>
+            var c = document.querySelector("#c2");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ffbcd9";
+
+            var angle = 45; //degree
+            var radians = angle * (Math.PI / 180);
+            ctx.rotate(radians);
+
+            ctx.fillRect(90, 0, 69, 69);
+        </script>
+
+        <h3>Order of operations</h3>
+        <p>You should generally scale objects first, rotate them next, and then finally translate last. There are times
+            when you'd want to rotate around an arbitrary point instead of an object's center, that's out of scope for
+            this lesson.
+            <br><br>It’s important to note that whatever transformations apply for all subsequent objects until you
+            reverse them.
+        </p>
+        <canvas id="c3" width="300" height="300"></canvas>
+        <script>
+            var c = document.querySelector("#c3");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#dddec3";
+
+            ctx.scale(3, 2);
+
+            var angle = 30;
+            var radians = angle * (Math.PI / 180);
+            ctx.rotate(radians);
+
+            ctx.translate(30,30);
+
+            ctx.fillRect(30,0,30,30);
+        </script>
+
     </body>
 
 </html>
