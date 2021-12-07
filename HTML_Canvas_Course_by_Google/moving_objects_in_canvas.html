@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Moving Objects in a Canvas</title>
+    </head>
+
+    <body>
+        <h1>Moving Objects in a Canvas</h1>
+        <h3>Scale Example</h3>
+        <canvas id="c" width="300" height="300"></canvas>
+        <script>
+            var c = document.querySelector("#c");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FFC300";
+
+            ctx.scale(2, 3);
+            ctx.fillRect(3, 3, 69, 69);
+        </script>
+
+        <h3>Translate Example</h3>
+        <canvas id="c1"></canvas>
+        <script>
+            var c = document.querySelector("#c1");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF5733";
+            
+            ctx.translate(60,30);
+            ctx.fillRect(0,0,30,30);
+        </script>
+    </body>
+
+</html>
