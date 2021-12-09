@@ -237,7 +237,7 @@ function callback(e) {
     return;
 
   // Do something
-  location.reload();
+  // location.reload();
 }
 
 if (document.addEventListener)
