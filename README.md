@@ -5,7 +5,7 @@
 + javascript innerhtml
 
 ## HTML Search Keywords
-
++ DOM
 
 ## CSS Search Keywords
 
@@ -25,3 +25,6 @@ https://classroom.udacity.com/courses/ud292/
 + [sweetalert2](https://sweetalert2.github.io/)
 
 + jQuery blockui
+
+## Bruce FE simple Memo App
++ https://www.youtube.com/watch?v=1pYtVwIAvhY
