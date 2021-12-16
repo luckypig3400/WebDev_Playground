@@ -7,15 +7,7 @@ const listDiv = document.getElementById("list");
 
 const list = [];
 
-addedBtn.addEventListener('click', function (e) {
-    list.push({
-        content: content.value,
-        date: date.value,
-        time: time.value
-    });
-
-    console.log("新增了1筆備忘錄，內容如下:", list[list.length - 1]);
-
+function renderMemo(){
     // 渲染頁面的List
     let listDivContent = "";
     list.forEach(function (item) {
@@ -30,4 +22,16 @@ addedBtn.addEventListener('click', function (e) {
     });
 
     listDiv.innerHTML = listDivContent;
+}
+
+addedBtn.addEventListener('click', function (e) {
+    list.unshift({// insert to start of array
+        content: content.value,
+        date: date.value,
+        time: time.value
+    });
+
+    console.log("新增了1筆備忘錄，內容如下:", list[list.length - 1]);
+
+    renderMemo();
 });
