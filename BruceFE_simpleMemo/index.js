@@ -35,3 +35,9 @@ addedBtn.addEventListener('click', function (e) {
 
     renderMemo();
 });
+
+deletedBtn.addEventListener('click', function(e){
+    list.shift();
+
+    renderMemo();
+})
