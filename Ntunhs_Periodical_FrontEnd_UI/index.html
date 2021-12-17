@@ -54,19 +54,34 @@
                     <ul>
                         <li><a class="active " href="index.html">首頁</a></li>
                         <li><a href="headlines.html">頭條新聞</a></li>
-                        <li><a href="special.html">特別報導</a></li>
-                        <li><a href="campus.html">校園尚青</a></li>
-                        <li><a href="soul.html">心靈立可白</a></li>
-                        <li><a href="business.html">業務報導</a></li>
+                        <!-- 之後頭條連結可以改成這個"classificationsMain.html?classification=headlines&period=217" -->
+                        <li><a href="classificationsMain.html?classification=special&period=217">特別報導</a></li>
+                        <li class="dropdown"><a href="#"><span>其他分類</span><i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="classificationsMain.html?classification=campus&period=217">校園尚青</a></li>
+                                <li><a href="classificationsMain.html?classification=soul&period=217">心靈立可白</a></li>
+                                <li><a href="classificationsMain.html?classification=business&period=217">業務報導</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"><span>字體調整</span> <i class="bi bi-chevron-down"></i></a>
+                            <!-- 字體放大與縮小還與更換背景主題可以參考此網站:https://kenming.gitlab.io/software-requirement-analysis/ch1/functional-vs-nonfunctional-requirement.html -->
+                            <ul>
+                                <li><a href="#main" id="incFontSize" class="scrollto"><span><i
+                                                class="bi bi-fonts"></i>+</span></a></li>
+                                <li><a href="#main" id="decFontSize" class="scrollto"><span><i
+                                                class="bi bi-fonts"></i>-</span></a></li>
+                                <li><a href="#main" id="resetFont" class="scrollto">重設字體</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown"><a href="#dontReload"><span>選擇期別</span> <i
                                     class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">第217期校訊</a></li>
-                                <li><a href="#">第216期校訊</a></li>
-                                <li><a href="#">第215期校訊</a></li>
+                                <li><a href="index.html?period=217">第217期校訊</a></li>
+                                <li><a href="index.html?period=216">第216期校訊</a></li>
+                                <li><a href="index.html?period=217">第215期校訊</a></li>
                             </ul>
                         </li>
-                        <li><a href="index.html#footer" class="scrollto">我要投稿</a></li>
+                        <li><a href="#footer" class="scrollto">我要投稿</a></li>
                         <li><a href="search.html"><i class="bi bi-search"></i></a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
@@ -225,7 +240,9 @@
                                         教育部委員於110年11月16日蒞臨國立臺北護理健康大校訪視招生選才計畫執行情形，由簡良翰執行長、李傳房教授、張嘉育教授等一行5人蒞校訪視，本校由吳淑芳校長代表接待，黃俊清副校長、計劃執行單位王采芷教務長、蘇義泰主秘及推動9系所主任及計畫人員出席協同接待；在開幕式中進行執行成果報告、系所經驗分享後，下午進行書面資料檢視及計劃人員個別訪談後，委員於綜和座談中給予建議，並對本校推動成果予以肯定。
                                         <br><br>在簡良翰執行長和吳淑芳校長致辭並介紹雙方出席人員後，由王采芷教務長簡報北護大執行成果；隨後分別由高照系蔡君明主任、健管系李佩珍主任、資管系徐建業主任及陳彥宏老師、生諮系李佩怡主任上台簡報分享執行經驗。
                                     </p>
-                                    <div class="read-more"><a href="headlines_single.html?classification=headlines&period=217&number=3"><i class="bi bi-arrow-right"></i> Read More</a>
+                                    <div class="read-more"><a
+                                            href="headlines_single.html?classification=headlines&period=217&number=3"><i
+                                                class="bi bi-arrow-right"></i> Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +256,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="#">頭條新聞4標題</a></h5>
                                     <p class="card-text">內文OwO ~fldsfdksgkfdjklfsdgjfkdlgjdf</p>
-                                    <div class="read-more"><a href="headlines_single.html?classification=headlines&period=217&number=4"><i class="bi bi-arrow-right"></i> Read More</a>
+                                    <div class="read-more"><a
+                                            href="headlines_single.html?classification=headlines&period=217&number=4"><i
+                                                class="bi bi-arrow-right"></i> Read More</a>
                                     </div>
                                 </div>
                             </div>
