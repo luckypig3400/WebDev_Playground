@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Canvas 2D Image data</title>
+    </head>
+
+    <body style="text-align: center;">
+        <canvas id="c" width="600" height="600"></canvas>
+
+        <script>
+            var c = document.querySelector("#c");
+            var ctx = c.getContext("2d");
+
+            var image = new Image();
+            image.onload = () => {
+                console.log("Image Loaded~!");
+                ctx.drawImage(image, 0, 0, c.width, c.height);
+            }
+
+            image.src = "https://media.4-paws.org/b/e/2/d/be2d88ceb9613ac5066bd11dd950faaf2671bef7/VIER%20PFOTEN_2019-03-15_001-1998x1999-600x600.jpg";
+        </script>
+    </body>
+
+</html>
