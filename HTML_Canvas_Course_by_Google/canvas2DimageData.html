@@ -21,7 +21,24 @@
                 ctx.drawImage(image, 0, 0, c.width, c.height);
             }
 
-            image.src = "https://media.4-paws.org/b/e/2/d/be2d88ceb9613ac5066bd11dd950faaf2671bef7/VIER%20PFOTEN_2019-03-15_001-1998x1999-600x600.jpg";
+            // image.src = "https://media.4-paws.org/b/e/2/d/be2d88ceb9613ac5066bd11dd950faaf2671bef7/VIER%20PFOTEN_2019-03-15_001-1998x1999-600x600.jpg";
+
+            // Get Image Data Object
+            var imgData = ctx.getImageData(0, 0, 600, 600);
+
+            function paintGreen(imageData) {
+                var numPixels = imageData.data.length / 4;
+                for (let i = 0; i < numPixels; i++) {
+                    if (i % 10 == 0) {
+                        imageData.data[i * 4 + 1] = 255;
+                        imageData.data[i * 4 + 3] = 255;
+                    }
+                }
+                ctx.putImageData(imageData, 0, 0);
+            }
+
+            paintGreen(imgData);
+
         </script>
     </body>
 
