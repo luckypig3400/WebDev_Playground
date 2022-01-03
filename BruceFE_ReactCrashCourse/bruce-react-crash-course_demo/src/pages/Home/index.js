@@ -16,7 +16,6 @@ const Home = () => {
         Home
         <Edit />
         <List />
-        <Item />
     </div>
 }
 
