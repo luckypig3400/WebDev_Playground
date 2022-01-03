@@ -12,7 +12,7 @@ import Item from "./components/Item"
 import "./index.css"
 
 const Home = () => {
-    return <div>
+    return <div className="app">
         Home
         <Edit />
         <List />
