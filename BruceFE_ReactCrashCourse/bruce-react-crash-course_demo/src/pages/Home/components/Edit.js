@@ -7,6 +7,7 @@ const Edit = () => {
         <input type="date"/>
         <p>時間:</p>
         <input type="time"/>
+        <button className="add">新增</button>
     </div>
 }
 
