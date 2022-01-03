@@ -2,11 +2,11 @@ const Edit = () => {
     return <div>
         <h1>備忘錄</h1>
         <p>記事:</p>
-        <input type="text">
+        <input type="text"/>
         <p>日期:</p>
-        <input type="date">
+        <input type="date"/>
         <p>時間:</p>
-        <input type="time">
+        <input type="time"/>
     </div>
 }
 
