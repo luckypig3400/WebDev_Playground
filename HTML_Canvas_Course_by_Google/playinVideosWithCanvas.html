@@ -26,6 +26,7 @@
 
             var draw = function () {
                 canvas.getContext("2d").drawImage(v, 0, 0);
+                requestAnimationFrame(draw);
             }
 
             v.addEventListener('play', function () {
