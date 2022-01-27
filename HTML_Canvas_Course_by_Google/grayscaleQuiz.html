@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grayscale Quiz</title>
+    </head>
+
+    <body>
+        <canvas id="c" width="969" height="690"></canvas>
+        <script>
+            var c = document.querySelector("#c");
+            var ctx = c.getContext("2d");
+
+            var image = new Image();
+            image.onload = () => {
+                console.log("image loaded!");
+                ctx.drawImage(image, 0, 0, image.width, image.height);
+            }
+
+            image.src = "./naruto.png";
+
+        </script>
+    </body>
+
+</html>
